@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SuperIT Solution - Blog | IT Tips & Updates</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IT tips, network security, CCTV guides, computer maintenance, technology blog from SuperIT Solution in Addis Ababa" name="keywords">
+    <meta content="Read our latest blog posts about IT tips, network security, CCTV installation guides, computer maintenance advice, and technology updates from SuperIT Solution." name="description">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .blog-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(0, 110, 255, 0.1);
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            padding-right: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            border-radius: 0 5px 5px 0;
+        }
+        .popular-post-item {
+            transition: all 0.3s;
+        }
+        .popular-post-item:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-2 d-none d-md-flex">
+        <div class="container">
+            <div class="d-flex justify-content-between topbar">
+                <div class="top-info">
+                    <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a>Bole Bulbula, Addis Ababa, Ethiopia</small>
+                    <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>superit@gmail.com</small>
+                </div>
+                <div id="note" class="text-secondary d-none d-xl-flex"><small>Note : Fast & Reliable IT Support | Read Our Latest IT Tips</small></div>
+                <div class="top-link">
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white fw-bold d-block">Super<span class="text-secondary">IT</span> <span class="fs-6 text-white-50">Solution</span></h1>
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded">
+                                <a href="blog.html" class="dropdown-item active">Our Blog</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="d-none d-xl-flex flex-shirink-0">
+                    <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                        <a href="tel:+251707273328" class="position-relative animated tada infinite">
+                            <i class="fa fa-phone-alt text-white fa-2x"></i>
+                            <div class="position-absolute" style="top: -7px; left: 20px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column pe-4 border-end">
+                        <span class="text-white-50">24/7 Support</span>
+                        <span class="text-secondary">+251 70 727 3328</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center ms-4">
+                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Our Blog</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Fact Start -->
+    <div class="container-fluid bg-secondary py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".1s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">500</h1>
+                        <h5 class="text-white mt-1">Happy Clients Served</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">1000</h1>
+                        <h5 class="text-white mt-1">Projects Completed</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">24</h1>
+                        <h5 class="text-white mt-1">Expert Technicians</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".7s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">7</h1>
+                        <h5 class="text-white mt-1">Years of Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5 my-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Blog Posts Column -->
+                <div class="col-lg-8">
+                    <div class="text-start mb-5 wow fadeIn" data-wow-delay=".3s">
+                        <h5 class="text-primary">Latest Articles</h5>
+                        <h1>Recent IT Tips & Updates</h1>
+                    </div>
+                    
+                    <div class="row g-5">
+                        <!-- Blog Post 1 -->
+                        <div class="col-12 wow fadeIn" data-wow-delay=".3s">
+                            <div class="blog-item position-relative bg-light rounded">
+                                <img src="img/blog-1.jpg" class="img-fluid w-100 rounded-top" alt="Network Security Tips">
+                                <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Network Security</span>
+                                <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
+                                    <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
+                                        <a href="#" class="btn text-white">Read More</a>
+                                    </div>
+                                    <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill">
+                                        <div class="blog-icon-1">
+                                            <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
+                                        </div>
+                                        <div class="blog-icon-2">
+                                            <a href="#" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-content position-relative px-4" style="margin-top: -25px;">
+                                    <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                    <h4>10 Essential Network Security Tips for Your Business</h4>
+                                    <div class="mb-2">
+                                        <span class="text-secondary me-3"><i class="far fa-user me-1"></i> By Biruk Tesfaye</span>
+                                        <span class="text-secondary"><i class="far fa-calendar-alt me-1"></i> 15 November 2024</span>
+                                    </div>
+                                    <p>Learn how to protect your business network from cyber threats. Discover essential security practices including firewall configuration, regular updates, and employee training to keep your data safe...</p>
+                                    <a href="#" class="btn btn-primary rounded-pill px-4 mb-4">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                                </div>
+                                <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
+                                    <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>1,284 Share</small></a>
+                                    <a href="#" class="text-white"><small><i class="fa fa-comments me-2 text-secondary"></i>12 Comments</small></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 2 -->
+                        <div class="col-12 wow fadeIn" data-wow-delay=".5s">
+                            <div class="blog-item position-relative bg-light rounded">
+                                <img src="img/blog-2.jpg" class="img-fluid w-100 rounded-top" alt="CCTV Installation Guide">
+                                <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Security Systems</span>
+                                <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
+                                    <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
+                                        <a href="#" class="btn text-white">Read More</a>
+                                    </div>
+                                    <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill">
+                                        <div class="blog-icon-1">
+                                            <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
+                                        </div>
+                                        <div class="blog-icon-2">
+                                            <a href="#" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-content position-relative px-4" style="margin-top: -25px;">
+                                    <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                    <h4>Complete Guide to CCTV Camera Installation for Your Business</h4>
+                                    <div class="mb-2">
+                                        <span class="text-secondary me-3"><i class="far fa-user me-1"></i> By Meron Alemu</span>
+                                        <span class="text-secondary"><i class="far fa-calendar-alt me-1"></i> 28 October 2024</span>
+                                    </div>
+                                    <p>Choosing the right CCTV system for your business can be overwhelming. Learn about camera types, placement strategies, resolution options, and remote monitoring solutions to maximize security...</p>
+                                    <a href="#" class="btn btn-primary rounded-pill px-4 mb-4">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                                </div>
+                                <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
+                                    <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>892 Share</small></a>
+                                    <a href="#" class="text-white"><small><i class="fa fa-comments me-2 text-secondary"></i>8 Comments</small></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 3 -->
+                        <div class="col-12 wow fadeIn" data-wow-delay=".7s">
+                            <div class="blog-item position-relative bg-light rounded">
+                                <img src="img/blog-3.jpg" class="img-fluid w-100 rounded-top" alt="Computer Maintenance">
+                                <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Maintenance</span>
+                                <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
+                                    <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
+                                        <a href="#" class="btn text-white">Read More</a>
+                                    </div>
+                                    <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill">
+                                        <div class="blog-icon-1">
+                                            <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
+                                        </div>
+                                        <div class="blog-icon-2">
+                                            <a href="#" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
+                                            <a href="#" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-content position-relative px-4" style="margin-top: -25px;">
+                                    <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                    <h4>5 Signs Your Computer Needs Professional Maintenance</h4>
+                                    <div class="mb-2">
+                                        <span class="text-secondary me-3"><i class="far fa-user me-1"></i> By Dawit Haile</span>
+                                        <span class="text-secondary"><i class="far fa-calendar-alt me-1"></i> 10 October 2024</span>
+                                    </div>
+                                    <p>Is your computer running slow? Learn to identify warning signs like unusual noises, frequent crashes, overheating, and slow performance that indicate it's time for professional maintenance...</p>
+                                    <a href="#" class="btn btn-primary rounded-pill px-4 mb-4">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                                </div>
+                                <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
+                                    <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>1,542 Share</small></a>
+                                    <a href="#" class="text-white"><small><i class="fa fa-comments me-2 text-secondary"></i>15 Comments</small></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="mt-5 wow fadeIn" data-wow-delay=".5s">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+                    <!-- Search Box -->
+                    <div class="bg-light rounded p-4 mb-4 wow fadeIn" data-wow-delay=".3s">
+                        <h4 class="mb-3">Search Blog</h4>
+                        <div class="search-box">
+                            <input type="text" class="form-control py-3" placeholder="Search articles...">
+                            <button class="btn btn-primary px-4"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="bg-light rounded p-4 mb-4 wow fadeIn" data-wow-delay=".4s">
+                        <h4 class="mb-3">Categories</h4>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>Network Security (8)</a>
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>CCTV & Security (6)</a>
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>Computer Maintenance (12)</a>
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>Software Tips (10)</a>
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>Web Development (5)</a>
+                            <a href="#" class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i>IT Training (7)</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular Posts -->
+                    <div class="bg-light rounded p-4 mb-4 wow fadeIn" data-wow-delay=".5s">
+                        <h4 class="mb-3">Popular Posts</h4>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="popular-post-item mb-3 d-flex align-items-center">
+                                <img src="img/blog-1.jpg" class="rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6 class="mb-1">10 Network Security Tips</h6>
+                                    <small class="text-muted">Nov 15, 2024</small>
+                                </div>
+                            </a>
+                            <a href="#" class="popular-post-item mb-3 d-flex align-items-center">
+                                <img src="img/blog-2.jpg" class="rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6 class="mb-1">CCTV Installation Guide</h6>
+                                    <small class="text-muted">Oct 28, 2024</small>
+                                </div>
+                            </a>
+                            <a href="#" class="popular-post-item mb-3 d-flex align-items-center">
+                                <img src="img/project-4.jpg" class="rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6 class="mb-1">Computer Maintenance Signs</h6>
+                                    <small class="text-muted">Oct 10, 2024</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="bg-primary rounded p-4 wow fadeIn" data-wow-delay=".6s">
+                        <h4 class="text-white mb-3">Subscribe to Newsletter</h4>
+                        <p class="text-white-50 mb-3">Get the latest IT tips and updates directly in your inbox.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control py-3" placeholder="Your Email">
+                        </div>
+                        <button class="btn btn-secondary text-white w-100 py-3">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html">
+                        <h1 class="text-white fw-bold d-block">Super<span class="text-secondary">IT</span> <span class="fs-5 text-white-50">Solution</span></h1>
+                    </a>
+                    <p class="mt-4 text-light">Professional IT support services in Addis Ababa, Ethiopia. Fast, reliable, and affordable technology solutions for businesses and individuals.</p>
+                    <div class="d-flex">
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#" class="h3 text-secondary">Quick Links</a>
+                    <div class="mt-4 d-flex flex-column">
+                        <a href="index.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Home</a>
+                        <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About Us</a>
+                        <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                        <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="h3 text-secondary">Our Services</a>
+                    <div class="mt-4 d-flex flex-column">
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Network & CCTV</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Hardware & Software</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Website Development</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>IT Training</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="h3 text-secondary">Contact Info</a>
+                    <div class="text-white mt-4 d-flex flex-column">
+                        <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>Bole Bulbula, Addis Ababa, Ethiopia</a>
+                        <a href="tel:+251707273328" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+251 70 727 3328</a>
+                        <a href="mailto:superit@gmail.com" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>superit@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-light mt-5 mb-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-light"><i class="fas fa-copyright text-secondary me-2"></i>2025 Super IT Solution, All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="text-light">Designed By <a href="#" class="text-secondary">SuperIT Team</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
