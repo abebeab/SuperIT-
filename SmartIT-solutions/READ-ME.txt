@@ -1,0 +1,9 @@
+  =>  Template Name    : SmartIT - IT Solutions Website Template
+
+  =>  Template Link    : www.SmartIT.com/it-solutions-website-template
+
+  =>  Template License : www.SmartIT.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : SmartIT-Team
+
+  =>  Author Website   : www.SmartIT.com
