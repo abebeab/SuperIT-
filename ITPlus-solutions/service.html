@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ITPlus Solution - IT Services | Network, CCTV, Hardware, Software & Training</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ITPlus Solution offers IT support, network installation, CCTV setup, computer maintenance, hardware repair, software installation, website development, and IT training in Addis Ababa, Ethiopia" name="keywords">
+    <meta content="Explore our comprehensive IT services including Network & Connectivity, CCTV Security, Hardware Repair, Software Installation, Website Development, and Professional IT Training." name="description">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .service-card-full {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .service-card-full:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 110, 255, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 1rem auto;
+        }
+        .service-list-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .service-list-item:last-child {
+            border-bottom: none;
+        }
+        .service-list-item i {
+            width: 20px;
+            color: #006eff;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #006eff;
+        }
+        .text-center .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* QR code style */
+        .footer-qr {
+            max-width: 90px;
+            background: white;
+            padding: 6px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="fw-bold d-block"><span class="text-secondary">IT</span><span class="text-white">Plus</span> <span class="fs-6 text-white-50">Solution</span></h1>
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link active">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded">
+                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="d-none d-xl-flex flex-shirink-0">
+                    <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                        <a href="tel:+251707273328" class="position-relative animated tada infinite">
+                            <i class="fa fa-phone-alt text-white fa-2x"></i>
+                            <div class="position-absolute" style="top: -7px; left: 20px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column pe-4 border-end">
+                        <span class="text-white-50">24/7 Support</span>
+                        <span class="text-secondary">+251 92 527 3328</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center ms-4">
+                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Our Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Fact Start -->
+    <div class="container-fluid bg-secondary py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".1s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">500</h1>
+                        <h5 class="text-white mt-1">Happy Clients Served</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">120</h1>
+                        <h5 class="text-white mt-1">Projects Completed</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">12</h1>
+                        <h5 class="text-white mt-1">Expert Technicians</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".7s">
+                    <div class="d-flex counter">
+                        <h1 class="me-3 text-primary counter-value">7</h1>
+                        <h5 class="text-white mt-1">Years of Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+    <!-- Services Start - Comprehensive IT Services -->
+    <div class="container-fluid py-5 my-5">
+        <div class="container py-5">
+            
+            <!-- Section I: IT Support Services -->
+            <div class="row mb-5">
+                <div class="col-12 wow fadeIn" data-wow-delay=".1s">
+                    <div class="section-title">
+                        <h5 class="text-primary">I. IT Support Services</h5>
+                        <h2 class="mb-3">Network, Security & Remote Support</h2>
+                    </div>
+                </div>
+                
+                <!-- Network & Connectivity -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".2s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Network & Connectivity</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Network installation and setup</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Wi-Fi router configuration & optimization</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Internet troubleshooting & support</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> IP configuration</div>
+                    </div>
+                </div>
+                
+                <!-- Security Systems -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-video fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Security Systems (CCTV)</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Security camera (CCTV) installation</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> CCTV configuration & maintenance</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Remote monitoring setup</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> 24/7 surveillance solutions</div>
+                    </div>
+                </div>
+                
+                <!-- Remote IT Assistance -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".4s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-house fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Remote IT Assistance</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Remote technical support</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> System troubleshooting & resolution</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Online software & device support</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Quick response time</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section II: Computer Maintenance & Technical Services -->
+            <div class="row mb-5">
+                <div class="col-12 wow fadeIn" data-wow-delay=".1s">
+                    <div class="section-title">
+                        <h5 class="text-primary">II. Computer Maintenance & Technical Services</h5>
+                        <h2 class="mb-3">Hardware & Software Solutions</h2>
+                    </div>
+                </div>
+                
+                <!-- Software Services -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".2s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fab fa-windows fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Software Services</h4>
+                        <h6 class="text-primary mt-2">Operating System & Productivity:</h6>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Windows installation & configuration</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Microsoft Office installation & activation</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Excel support & troubleshooting</div>
+                        <h6 class="text-primary mt-2">Security & Protection:</h6>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Antivirus installation & updates</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Virus & malware removal</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Password reset & account recovery</div>
+                        <h6 class="text-primary mt-2">Software Installation:</h6>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Installation of all types of software</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Driver installation & system updates</div>
+                    </div>
+                </div>
+                
+                <!-- Hardware Services -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Hardware Services</h4>
+                        <h6 class="text-primary mt-2">Computer Upgrades & Repair:</h6>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> RAM upgrades</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> HDD/SSD upgrades</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Computer performance optimization</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Hardware troubleshooting & repair</div>
+                        <h6 class="text-primary mt-2">Data & Device Support:</h6>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> USB flash drive recovery</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Printer installation & configuration</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Printer troubleshooting & maintenance</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Ink refilling services</div>
+                    </div>
+                </div>
+                
+                <!-- Professional Software -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".4s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Graphics & Engineering Software</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Adobe Photoshop installation & support</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> AutoCAD installation & support</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Other professional software solutions</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section III: Website Development & Digital Services -->
+            <div class="row mb-5">
+                <div class="col-12 wow fadeIn" data-wow-delay=".1s">
+                    <div class="section-title">
+                        <h5 class="text-primary">III. Website Development & Digital Services</h5>
+                        <h2 class="mb-3">Web Solutions For Your Business</h2>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".2s">
+                    <div class="service-card-full bg-light rounded p-4 text-center h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush fa-3x text-primary"></i>
+                        </div>
+                        <h5>Website Design</h5>
+                        <p class="small mt-2">Modern, responsive and user-friendly designs</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="service-card-full bg-light rounded p-4 text-center h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-code fa-3x text-primary"></i>
+                        </div>
+                        <h5>Website Development</h5>
+                        <p class="small mt-2">Custom web applications and dynamic websites</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".4s">
+                    <div class="service-card-full bg-light rounded p-4 text-center h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud-upload-alt fa-3x text-primary"></i>
+                        </div>
+                        <h5>Deployment & Hosting</h5>
+                        <p class="small mt-2">Website deployment and hosting setup</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="service-card-full bg-light rounded p-4 text-center h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+                        </div>
+                        <h5>Business & Portfolio Websites</h5>
+                        <p class="small mt-2">Professional business and portfolio solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section IV: Training & Skill Development -->
+            <div class="row">
+                <div class="col-12 wow fadeIn" data-wow-delay=".1s">
+                    <div class="section-title">
+                        <h5 class="text-primary">IV. Training & Skill Development</h5>
+                        <h2 class="mb-3">Empower Yourself With IT Skills</h2>
+                    </div>
+                </div>
+                
+                <!-- Basic Computer Training -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".2s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Basic Computer Training</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Computer fundamentals</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Internet and email usage</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> File and folder management</div>
+                    </div>
+                </div>
+                
+                <!-- Microsoft Office Training -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-file-excel fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Microsoft Office Training</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Microsoft Word training</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Microsoft Excel training</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Microsoft PowerPoint training</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Microsoft Access basics</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Document preparation & formatting</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Spreadsheet formulas & reporting</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Presentation design skills</div>
+                    </div>
+                </div>
+                
+                <!-- Professional IT Skills -->
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".4s">
+                    <div class="service-card-full bg-light rounded p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-user-graduate fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-center">Professional IT Skills</h4>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Basic IT support training</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Software installation training</div>
+                        <div class="service-list-item"><i class="fas fa-check me-2"></i> Practical troubleshooting skills</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">Why Choose Us</h5>
+                <h1>Why ITPlus Solution?</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-2 text-center wow fadeIn" data-wow-delay=".2s">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                        <h6>Fast & Reliable</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center wow fadeIn" data-wow-delay=".3s">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+                        <h6>Professional Support</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center wow fadeIn" data-wow-delay=".4s">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <i class="fas fa-tag fa-3x text-primary mb-3"></i>
+                        <h6>Affordable Pricing</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center wow fadeIn" data-wow-delay=".5s">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h6>Remote & Onsite</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center wow fadeIn" data-wow-delay=".6s">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <i class="fas fa-smile fa-3x text-primary mb-3"></i>
+                        <h6>Customer Focused</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us End -->
+
+    <!-- Call to Action Start -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-8 wow fadeIn" data-wow-delay=".3s">
+                    <h1 class="text-white mb-3">Need Professional IT Services?</h1>
+                    <p class="text-white-50 mb-4">Contact us today for a free consultation. We provide fast, reliable, and affordable IT solutions.</p>
+                    <a href="contact.html" class="btn btn-secondary text-white rounded-pill px-5 py-3">Get A Quote</a>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="bg-white rounded p-4 text-center">
+                        <i class="fas fa-phone-alt fa-3x text-primary mb-3"></i>
+                        <h4 class="mb-2">Call Us Now</h4>
+                        <h2 class="text-primary mb-0">+251 92 527 3328</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html">
+                        <h1 class="fw-bold d-block"><span class="text-secondary">IT</span><span class="text-white">Plus</span> <span class="fs-5 text-white-50">Solution</span></h1>
+                    </a>
+                    <p class="mt-4 text-light">Professional IT support services in Addis Ababa, Ethiopia. Fast, reliable, and affordable technology solutions for businesses and individuals.</p>
+                    <div class="d-flex">
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
+                        <a href="#" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#" class="h3 text-secondary">Quick Links</a>
+                    <div class="mt-4 d-flex flex-column">
+                        <a href="index.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Home</a>
+                        <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About Us</a>
+                        <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                        <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="h3 text-secondary">Our Services</a>
+                    <div class="mt-4 d-flex flex-column">
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Network & CCTV</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Hardware & Software</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Website Development</a>
+                        <a href="#" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>IT Training</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="h3 text-secondary">Contact Info</a>
+                    <div class="text-white mt-4 d-flex flex-column">
+                        <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>Bole Bulbula, Addis Ababa, Ethiopia</a>
+                        <a href="tel:+251707273328" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+251 92 527 3328</a>
+                        <a href="mailto:itplussolutioninfo@gmail.com" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>itplussolutioninfo@gmail.com</a>
+                        <!-- QR CODE ADDED HERE -->
+                        <div class="mt-3 text-center">
+                            <img src="img/itplussolution_branded_qr.png" alt="Scan to visit ITPlus Solution website" class="footer-qr img-fluid">
+                            <p class="text-white-50 small mt-2 mb-0">Scan to visit our website</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-light mt-5 mb-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-light"><i class="fas fa-copyright text-secondary me-2"></i>2026 ITPlus Solution, All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="text-light">Designed By <a href="#" class="text-secondary">ITPlus Team</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
