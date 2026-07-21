@@ -385,45 +385,81 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    
-    <!-- Contact Form JavaScript -->
+
+    <!-- ====== EMAILJS SDK ====== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- ====== LOAD SECRET CONFIG (ignored by git) ====== -->
+    <script src="config.js"></script>
+
+    <!-- ====== CONTACT FORM HANDLER (uses config) ====== -->
     <script>
         $(document).ready(function() {
+            // Initialize EmailJS using the public key from config.js
+            emailjs.init(EMAILJS_CONFIG.publicKey);
+
             $('#contactForm').on('submit', function(e) {
                 e.preventDefault();
-                
-                var name = $('#name').val();
-                var email = $('#email').val();
-                var phone = $('#phone').val();
+
+                // Get form values
+                var name = $('#name').val().trim();
+                var email = $('#email').val().trim();
+                var phone = $('#phone').val().trim();
                 var service = $('#service').val();
-                var message = $('#message').val();
-                
-                if(name === '' || email === '' || message === '') {
-                    $('#formAlert').removeClass('alert-success').addClass('alert alert-danger').html('Please fill in all required fields.').fadeIn();
+                var message = $('#message').val().trim();
+
+                // ---------- Client-side validation ----------
+                if (name === '' || email === '' || message === '') {
+                    $('#formAlert').removeClass('alert-success alert-info').addClass('alert alert-danger')
+                        .html('Please fill in all required fields.').fadeIn();
                     return false;
                 }
-                
+
                 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if(!emailRegex.test(email)) {
-                    $('#formAlert').removeClass('alert-success').addClass('alert alert-danger').html('Please enter a valid email address.').fadeIn();
+                if (!emailRegex.test(email)) {
+                    $('#formAlert').removeClass('alert-success alert-info').addClass('alert alert-danger')
+                        .html('Please enter a valid email address.').fadeIn();
                     return false;
                 }
-                
-                $('#formAlert').removeClass('alert-danger').addClass('alert alert-info').html('Sending message...').fadeIn();
-                
-                setTimeout(function() {
-                    $('#formAlert').removeClass('alert-info').addClass('alert alert-success').html('Thank you ' + name + '! Your message has been sent. We will contact you within 24 hours.');
+
+                // ---------- Show sending status ----------
+                $('#formAlert').removeClass('alert-danger alert-success').addClass('alert alert-info')
+                    .html('<i class="fas fa-spinner fa-spin me-2"></i>Sending message...').fadeIn();
+
+                // ---------- Prepare template parameters ----------
+                var templateParams = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    service: service,
+                    message: message
+                };
+
+                // ---------- Send via EmailJS (using config) ----------
+                emailjs.send(
+                    EMAILJS_CONFIG.serviceID,
+                    EMAILJS_CONFIG.templateID,
+                    templateParams
+                ).then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    $('#formAlert').removeClass('alert-info').addClass('alert alert-success')
+                        .html('Thank you ' + name + '! Your message has been sent. We will contact you within 24 hours.');
                     $('#contactForm')[0].reset();
-                    
                     setTimeout(function() {
                         $('#formAlert').fadeOut();
                     }, 5000);
-                }, 1500);
-                
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    $('#formAlert').removeClass('alert-info').addClass('alert alert-danger')
+                        .html('Oops! Something went wrong. Please try again later or call us directly.');
+                });
+
                 return false;
             });
         });
     </script>
+
 </body>
 
-</html>
+</hm>
