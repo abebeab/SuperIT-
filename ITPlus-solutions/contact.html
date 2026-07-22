@@ -469,7 +469,7 @@
                 // --- 1. Send admin notification to your business ---
                 emailjs.send(
                     EMAILJS_CONFIG.serviceID,
-                    EMAILJS_CONFIG.adminTemplateID,   // ← template_060ni1x
+                    EMAILJS_CONFIG.adminTemplateID,
                     adminParams
                 ).then(function(adminResponse) {
 
@@ -478,7 +478,7 @@
                     // --- 2. Send auto-reply to the customer ---
                     return emailjs.send(
                         EMAILJS_CONFIG.serviceID,
-                        EMAILJS_CONFIG.autoReplyTemplateID, // ← template_lq0l6mi
+                        EMAILJS_CONFIG.autoReplyTemplateID,
                         autoParams
                     ).then(function(autoResponse) {
                         console.log('✅ Auto-reply sent to customer! Status:', autoResponse.status);
