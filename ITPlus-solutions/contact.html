@@ -387,20 +387,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 
-    <!-- ====== CONFIG (now with separate keys) ====== -->
-    <script>
-        // ✅ CORRECTED CONFIG – two separate template IDs
-        const EMAILJS_CONFIG = {
-            publicKey: 'pAWs1S4mS3LsWKPn9',
-            serviceID: 'service_oonxxrr',
-            adminTemplateID: 'template_060ni1x',      // ← sends to your business
-            autoReplyTemplateID: 'template_lq0l6mi'   // ← auto‑reply to customer
-        };
-    </script>
+    <!-- ====== LOAD EXTERNAL CONFIG ====== -->
+    <script src="config.js"></script>
 
     <!-- ====== CONTACT FORM HANDLER ====== -->
     <script>
         $(document).ready(function() {
+
+            // Check if config loaded
+            if (typeof EMAILJS_CONFIG === 'undefined') {
+                console.error('❌ config.js not loaded or EMAILJS_CONFIG missing.');
+                $('#formAlert').addClass('alert alert-danger')
+                    .html('Configuration error. Please contact support.').fadeIn();
+                return;
+            }
 
             // Initialize EmailJS
             emailjs.init(EMAILJS_CONFIG.publicKey);
