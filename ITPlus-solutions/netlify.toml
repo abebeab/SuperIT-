@@ -1,3 +1,3 @@
 [build]
-  command = "printf 'const CONFIG = { API_KEY: \"%s\" };' \"$API_KEY\" > config.js"
+  command = "printf 'const EMAILJS_CONFIG = { API_KEY: \"%s\" };' \"$API_KEY\" > config.js"
   publish = "."
